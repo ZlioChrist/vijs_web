@@ -1,0 +1,290 @@
+
+            :root {
+                --pink-coral: #FFB6C1;
+                --pink-tua: #FF69B4;
+                --tosca: #40E0D0;
+                --tosca-muda: #7FFFD4;
+                --kuning: #FFD700;
+                --kuning-muda: #FFE4B5;
+                --biru-dongker: #000080;
+                --abu-abu: #808080;
+            }
+            body {
+                font-family: 'Quicksand', sans-serif;
+                background: linear-gradient(135deg, #FFF5F7 0%, #F0FFFF 50%, #FFFBE6 100%);
+                min-height: 100vh;
+                padding: 40px 20px;
+            }
+            .order-success-card {
+                max-width: 750px;
+                margin: 30px auto;
+                background: white;
+                border-radius: 30px;
+                overflow: hidden;
+                box-shadow: 0 25px 80px rgba(255, 182, 193, 0.3);
+                border: 3px solid var(--pink-coral);
+                animation: slideInUp 0.6s ease;
+            }
+            @keyframes slideInUp {
+                from { opacity: 0; transform: translateY(40px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .order-header {
+                background: linear-gradient(135deg, var(--pink-coral), var(--tosca));
+                padding: 50px 40px;
+                text-align: center;
+                color: white;
+                position: relative;
+                overflow: hidden;
+            }
+            .order-header::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+                animation: rotate 20s linear infinite;
+            }
+            @keyframes rotate {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            .order-header-content {
+                position: relative;
+                z-index: 2;
+            }
+            .success-icon {
+                width: 100px;
+                height: 100px;
+                background: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 25px;
+                font-size: 3rem;
+                color: var(--pink-tua);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                animation: bounce 2s ease-in-out infinite;
+            }
+            @keyframes bounce {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+            }
+            .order-header h2 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin: 0 0 15px;
+                font-family: 'Poppins', sans-serif;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            }
+            .order-number {
+                background: rgba(255, 255, 255, 0.25);
+                padding: 12px 30px;
+                border-radius: 50px;
+                display: inline-block;
+                margin-top: 15px;
+                font-weight: 700;
+                font-size: 1.1rem;
+                backdrop-filter: blur(10px);
+            }
+            .order-body {
+                padding: 45px 40px;
+            }
+            .next-steps {
+                background: linear-gradient(135deg, #E3F2FD, #E8F5E9);
+                border: 2px solid var(--tosca);
+                border-radius: 20px;
+                padding: 25px;
+                margin-bottom: 35px;
+            }
+            .next-steps h5 {
+                color: var(--biru-dongker);
+                font-weight: 700;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .next-steps ol {
+                margin: 0;
+                padding-left: 20px;
+                color: var(--abu-abu);
+                line-height: 1.8;
+            }
+            .next-steps li {
+                margin-bottom: 8px;
+            }
+            .confirmation-title {
+                text-align: center;
+                margin-bottom: 30px;
+                color: var(--biru-dongker);
+                font-weight: 700;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.4rem;
+            }
+            .confirmation-methods {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+                margin-bottom: 40px;
+            }
+            .method-card {
+                border: 2px solid;
+                border-radius: 25px;
+                padding: 30px;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                background: white;
+            }
+            .method-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+            }
+            .method-card.instagram {
+                border-color: var(--pink-coral);
+                background: linear-gradient(135deg, #FFF5F7, #FFE4E1);
+            }
+            .method-card.whatsapp {
+                border-color: #25D366;
+                background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+            }
+            .method-icon {
+                width: 85px;
+                height: 85px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2.5rem;
+                margin: 0 auto 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            }
+            .instagram .method-icon {
+                background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+                color: white;
+            }
+            .whatsapp .method-icon {
+                background: #25D366;
+                color: white;
+            }
+            .method-card h5 {
+                text-align: center;
+                margin-bottom: 12px;
+                color: var(--biru-dongker);
+                font-weight: 700;
+                font-family: 'Poppins', sans-serif;
+            }
+            .method-card p {
+                text-align: center;
+                color: var(--abu-abu);
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+            .order-format-box {
+                background: #F8F9FA;
+                border: 2px dashed var(--tosca);
+                border-radius: 20px;
+                padding: 20px;
+                margin: 20px 0;
+                font-family: 'Courier New', monospace;
+                font-size: 0.85rem;
+                max-height: 280px;
+                overflow-y: auto;
+                white-space: pre-wrap;
+                line-height: 1.5;
+                color: var(--biru-dongker);
+            }
+            .btn-copy {
+                background: linear-gradient(135deg, var(--pink-tua), var(--kuning));
+                border: none;
+                color: white;
+                font-weight: 600;
+                padding: 14px 30px;
+                border-radius: 50px;
+                width: 100%;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                font-size: 1rem;
+            }
+            .btn-copy:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 35px rgba(255, 105, 180, 0.4);
+            }
+            .btn-instagram {
+                background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+                border: none;
+                color: white;
+                font-weight: 600;
+                padding: 14px 30px;
+                border-radius: 50px;
+                width: 100%;
+                margin-top: 12px;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                font-size: 1rem;
+            }
+            .btn-instagram:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 35px rgba(220, 39, 67, 0.4);
+            }
+            .btn-whatsapp {
+                background: #25D366;
+                border: none;
+                color: white;
+                font-weight: 600;
+                padding: 16px 35px;
+                border-radius: 50px;
+                width: 100%;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                font-size: 1.05rem;
+                box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            }
+            .btn-whatsapp:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 18px 45px rgba(37, 211, 102, 0.55);
+            }
+            .continue-shopping {
+                text-align: center;
+                margin-top: 40px;
+                padding-top: 30px;
+                border-top: 2px dashed var(--pink-coral);
+            }
+            .btn-continue {
+                background: white;
+                border: 2px solid var(--pink-coral);
+                color: var(--pink-tua);
+                font-weight: 600;
+                padding: 14px 40px;
+                border-radius: 50px;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 1rem;
+            }
+            .btn-continue:hover {
+                background: linear-gradient(135deg, var(--pink-coral), var(--pink-tua));
+                color: white;
+                border-color: transparent;
+                transform: translateY(-3px);
+            }
+            @media (max-width: 768px) {
+                .order-header { padding: 40px 30px; }
+                .order-body { padding: 35px 30px; }
+                .confirmation-methods { grid-template-columns: 1fr; }
+                .order-format-box { font-size: 0.8rem; }
+            }
